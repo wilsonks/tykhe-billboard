@@ -1,0 +1,58 @@
+
+pack.png
+size: 2048,2048
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+BG
+  rotate: false
+  xy: 1133, 98
+  size: 42, 1920
+  split: 0, 0, 0, 0
+  orig: 42, 1920
+  offset: 0, 0
+  index: -1
+LIVEROULETTE
+  rotate: false
+  xy: 1177, 1963
+  size: 359, 55
+  orig: 359, 55
+  offset: 0, 0
+  index: -1
+LastNumberBar
+  rotate: false
+  xy: 640, 394
+  size: 491, 1624
+  orig: 491, 1624
+  offset: 0, 0
+  index: -1
+PercentageBar
+  rotate: false
+  xy: 2, 394
+  size: 636, 1624
+  orig: 636, 1624
+  offset: 0, 0
+  index: -1
+RecentBar
+  rotate: false
+  xy: 2, 2
+  size: 124, 166
+  split: 13, 13, 15, 15
+  orig: 124, 166
+  offset: 0, 0
+  index: -1
+UperBar
+  rotate: false
+  xy: 1177, 1729
+  size: 119, 232
+  split: 5, 5, 4, 4
+  orig: 119, 232
+  offset: 0, 0
+  index: -1
+wheel
+  rotate: false
+  xy: 2, 170
+  size: 223, 222
+  orig: 223, 222
+  offset: 0, 0
+  index: -1

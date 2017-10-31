@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="ivy-report.xsl"?>
+<ivy-report version="1.0">
+	<info
+		organisation="default"
+		module="project$sources_2.10"
+		revision="0.1-SNAPSHOT"
+		conf="runtime-internal"
+		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool"
+		date="20171031123637"/>
+	<dependencies>
+		<module organisation="com.eed3si9n" name="sbt-assembly">
+			<revision name="0.14.5" status="release" pubdate="20170612215450" resolver="sbt-chain" artresolver="sbt-chain" extra-scalaVersion="2.10" extra-sbtVersion="0.13" downloaded="false" searched="false" default="false" conf="compile, default(compile)" position="13">
+				<license name="MIT License" url="https://github.com/sbt/sbt-assembly/blob/master/LICENSE"/>
+				<metadata-artifact status="no" details="" size="1767" time="0" location="/home/wilson/.ivy2/cache/scala_2.10/sbt_0.13/com.eed3si9n/sbt-assembly/ivy-0.14.5.xml" searched="false" origin-is-local="false" origin-location="https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.eed3si9n/sbt-assembly/scala_2.10/sbt_0.13/0.14.5/ivys/ivy.xml"/>
+				<caller organisation="default" name="project$sources_2.10" conf="compile, runtime-internal, runtime, optional" rev="0.14.5" rev-constraint-default="0.14.5" rev-constraint-dynamic="0.14.5" callerrev="0.1-SNAPSHOT" extra-scalaVersion="2.10" extra-sbtVersion="0.13"/>
+				<artifacts>
+					<artifact name="sbt-assembly" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="13016" time="3493" location="/home/wilson/.ivy2/cache/scala_2.10/sbt_0.13/com.eed3si9n/sbt-assembly/srcs/sbt-assembly-0.14.5-sources.jar">
+						<origin-location is-local="false" location="http://repo-desktop:8081/artifactory/proxy-ivy/com.eed3si9n/sbt-assembly/scala_2.10/sbt_0.13/0.14.5/srcs/sbt-assembly-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.pantsbuild" name="jarjar">
+			<revision name="1.6.4" status="release" pubdate="20170220024541" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/pantsbuild/jarjar" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="12">
+				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+				<metadata-artifact status="no" details="" size="3171" time="0" location="/home/wilson/.ivy2/cache/org.pantsbuild/jarjar/ivy-1.6.4.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/pantsbuild/jarjar/1.6.4/jarjar-1.6.4.pom"/>
+				<caller organisation="default" name="project$sources_2.10" conf="compile, runtime-internal, runtime, optional" rev="1.6.4" rev-constraint-default="1.6.4" rev-constraint-dynamic="1.6.4" callerrev="0.1-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="jarjar" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="50419" time="2270" location="/home/wilson/.ivy2/cache/org.pantsbuild/jarjar/srcs/jarjar-1.6.4-sources.jar">
+						<origin-location is-local="false" location="http://repo-desktop:8081/artifactory/proxy-maven/org/pantsbuild/jarjar/1.6.4/jarjar-1.6.4-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.ow2.asm" name="asm-commons">
+			<revision name="5.2" status="release" pubdate="20161223151313" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="19">
+				<license name="BSD" url="http://asm.objectweb.org/license.html"/>
+				<metadata-artifact status="no" details="" size="4124" time="0" location="/home/wilson/.ivy2/cache/org.ow2.asm/asm-commons/ivy-5.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/ow2/asm/asm-commons/5.2/asm-commons-5.2.pom"/>
+				<caller organisation="default" name="project$sources_2.10" conf="compile, runtime-internal, runtime, optional" rev="5.2" rev-constraint-default="5.2" rev-constraint-dynamic="5.2" callerrev="0.1-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="asm-commons" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="1069155" time="941" location="/home/wilson/.ivy2/cache/org.ow2.asm/asm-commons/srcs/asm-commons-5.2-sources.jar">
+						<origin-location is-local="false" location="http://repo-desktop:8081/artifactory/proxy-maven/org/ow2/asm/asm-commons/5.2/asm-commons-5.2-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.apache.ant" name="ant">
+			<revision name="1.9.9" status="release" pubdate="20170203001004" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://ant.apache.org/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="20">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="3217" time="0" location="/home/wilson/.ivy2/cache/org.apache.ant/ant/ivy-1.9.9.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/ant/ant/1.9.9/ant-1.9.9.pom"/>
+				<caller organisation="default" name="project$sources_2.10" conf="compile, runtime-internal, runtime, optional" rev="1.9.9" rev-constraint-default="1.9.9" rev-constraint-dynamic="1.9.9" callerrev="0.1-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="ant" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="1956157" time="3973" location="/home/wilson/.ivy2/cache/org.apache.ant/ant/srcs/ant-1.9.9-sources.jar">
+						<origin-location is-local="false" location="http://repo-desktop:8081/artifactory/proxy-maven/org/apache/ant/ant/1.9.9/ant-1.9.9-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scalactic" name="scalactic_2.10">
+			<revision name="3.0.1" status="release" pubdate="20161110092955" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scalatest.org" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="6">
+				<license name="the Apache License, ASL Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+				<metadata-artifact status="no" details="" size="2967" time="0" location="/home/wilson/.ivy2/cache/org.scalactic/scalactic_2.10/ivy-3.0.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scalactic/scalactic_2.10/3.0.1/scalactic_2.10-3.0.1.pom"/>
+				<caller organisation="default" name="project$sources_2.10" conf="compile, runtime-internal, runtime, optional" rev="3.0.1" rev-constraint-default="3.0.1" rev-constraint-dynamic="3.0.1" callerrev="0.1-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="scalactic_2.10" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="201082" time="3718" location="/home/wilson/.ivy2/cache/org.scalactic/scalactic_2.10/srcs/scalactic_2.10-3.0.1-sources.jar">
+						<origin-location is-local="false" location="http://repo-desktop:8081/artifactory/proxy-maven/org/scalactic/scalactic_2.10/3.0.1/scalactic_2.10-3.0.1-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-lang" name="scala-reflect">
+			<revision name="2.10.6" status="release" pubdate="20150918150538" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" extra-info.apiURL="http://www.scala-lang.org/api/2.10.6/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="11">
+				<license name="BSD-like" url="http://www.scala-lang.org/downloads/license.html    "/>
+				<metadata-artifact status="no" details="" size="2647" time="0" location="/home/wilson/.ivy2/cache/org.scala-lang/scala-reflect/ivy-2.10.6.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.10.6/scala-reflect-2.10.6.pom"/>
+				<caller organisation="default" name="project$sources_2.10" conf="compile, runtime-internal, runtime, optional" rev="2.10.6" rev-constraint-default="2.10.6" rev-constraint-dynamic="2.10.6" callerrev="0.1-SNAPSHOT" extra-info.apiURL="http://www.scala-lang.org/api/2.10.6/"/>
+				<artifacts>
+					<artifact name="scala-reflect" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="435463" time="123" location="/home/wilson/.ivy2/cache/org.scala-lang/scala-reflect/srcs/scala-reflect-2.10.6-sources.jar">
+						<origin-location is-local="false" location="http://repo-desktop:8081/artifactory/proxy-maven/org/scala-lang/scala-reflect/2.10.6/scala-reflect-2.10.6-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-lang" name="scala-library">
+			<revision name="2.10.6" status="release" pubdate="20150918150528" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" extra-info.apiURL="http://www.scala-lang.org/api/2.10.6/" downloaded="false" searched="false" default="false" conf="default, master(*), compile, runtime(*), master(compile), runtime, default(compile), compile(*), master" position="14">
+				<license name="BSD-like" url="http://www.scala-lang.org/downloads/license.html          "/>
+				<metadata-artifact status="no" details="" size="2487" time="0" location="/home/wilson/.ivy2/cache/org.scala-lang/scala-library/ivy-2.10.6.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.pom"/>
+				<caller organisation="default" name="project$sources_2.10" conf="compile, runtime-internal, runtime, optional" rev="2.10.6" rev-constraint-default="2.10.6" rev-constraint-dynamic="2.10.6" callerrev="0.1-SNAPSHOT" extra-info.apiURL="http://www.scala-lang.org/api/2.10.6/"/>
+				<artifacts>
+					<artifact name="scala-library" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="1065535" time="176" location="/home/wilson/.ivy2/cache/org.scala-lang/scala-library/srcs/scala-library-2.10.6-sources.jar">
+						<origin-location is-local="false" location="http://repo-desktop:8081/artifactory/proxy-maven/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.apache.maven" name="maven-plugin-api">
+			<revision name="3.3.9" status="release" pubdate="20151110220938" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="5">
+				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="14930" time="0" location="/home/wilson/.ivy2/cache/org.apache.maven/maven-plugin-api/ivy-3.3.9.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/maven/maven-plugin-api/3.3.9/maven-plugin-api-3.3.9.pom"/>
+				<caller organisation="default" name="project$sources_2.10" conf="compile, runtime-internal, runtime, optional" rev="3.3.9" rev-constraint-default="3.3.9" rev-constraint-dynamic="3.3.9" callerrev="0.1-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="maven-plugin-api" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="45153" time="1712" location="/home/wilson/.ivy2/cache/org.apache.maven/maven-plugin-api/srcs/maven-plugin-api-3.3.9-sources.jar">
+						<origin-location is-local="false" location="http://repo-desktop:8081/artifactory/proxy-maven/org/apache/maven/maven-plugin-api/3.3.9/maven-plugin-api-3.3.9-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.eclipse.sisu" name="org.eclipse.sisu.plexus">
+			<revision name="0.3.2" status="release" pubdate="20150914051525" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="15">
+				<license name="Eclipse Public License, Version 1.0" url="http://www.eclipse.org/legal/epl-v10.html"/>
+				<metadata-artifact status="no" details="" size="4973" time="0" location="/home/wilson/.ivy2/cache/org.eclipse.sisu/org.eclipse.sisu.plexus/ivy-0.3.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/eclipse/sisu/org.eclipse.sisu.plexus/0.3.2/org.eclipse.sisu.plexus-0.3.2.pom"/>
+				<caller organisation="default" name="project$sources_2.10" conf="compile, runtime-internal, runtime, optional" rev="0.3.2" rev-constraint-default="0.3.2" rev-constraint-dynamic="0.3.2" callerrev="0.1-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="org.eclipse.sisu.plexus" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="152528" time="1977" location="/home/wilson/.ivy2/cache/org.eclipse.sisu/org.eclipse.sisu.plexus/srcs/org.eclipse.sisu.plexus-0.3.2-sources.jar">
+						<origin-location is-local="false" location="http://repo-desktop:8081/artifactory/proxy-maven/org/eclipse/sisu/org.eclipse.sisu.plexus/0.3.2/org.eclipse.sisu.plexus-0.3.2-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.codehaus.plexus" name="plexus-classworlds">
+			<revision name="2.5.2" status="release" pubdate="20140829223823" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="10">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="7221" time="0" location="/home/wilson/.ivy2/cache/org.codehaus.plexus/plexus-classworlds/ivy-2.5.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/codehaus/plexus/plexus-classworlds/2.5.2/plexus-classworlds-2.5.2.pom"/>
+				<caller organisation="default" name="project$sources_2.10" conf="compile, runtime-internal, runtime, optional" rev="2.5.2" rev-constraint-default="2.5.2" rev-constraint-dynamic="2.5.2" callerrev="0.1-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="plexus-classworlds" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="49562" time="46" location="/home/wilson/.ivy2/cache/org.codehaus.plexus/plexus-classworlds/srcs/plexus-classworlds-2.5.2-sources.jar">
+						<origin-location is-local="false" location="http://repo-desktop:8081/artifactory/proxy-maven/org/codehaus/plexus/plexus-classworlds/2.5.2/plexus-classworlds-2.5.2-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.codehaus.plexus" name="plexus-component-annotations">
+			<revision name="1.5.5" status="release" pubdate="20101001014459" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="16">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="5287" time="0" location="/home/wilson/.ivy2/cache/org.codehaus.plexus/plexus-component-annotations/ivy-1.5.5.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/codehaus/plexus/plexus-component-annotations/1.5.5/plexus-component-annotations-1.5.5.pom"/>
+				<caller organisation="default" name="project$sources_2.10" conf="compile, runtime-internal, runtime, optional" rev="1.5.5" rev-constraint-default="1.5.5" rev-constraint-dynamic="1.5.5" callerrev="0.1-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="plexus-component-annotations" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="3725" time="46" location="/home/wilson/.ivy2/cache/org.codehaus.plexus/plexus-component-annotations/srcs/plexus-component-annotations-1.5.5-sources.jar">
+						<origin-location is-local="false" location="http://repo-desktop:8081/artifactory/proxy-maven/org/codehaus/plexus/plexus-component-annotations/1.5.5/plexus-component-annotations-1.5.5-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.apache.maven" name="maven-model">
+			<revision name="3.3.9" status="release" pubdate="20151110220906" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="8">
+				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="14565" time="0" location="/home/wilson/.ivy2/cache/org.apache.maven/maven-model/ivy-3.3.9.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/maven/maven-model/3.3.9/maven-model-3.3.9.pom"/>
+				<caller organisation="default" name="project$sources_2.10" conf="compile, runtime-internal, runtime, optional" rev="3.3.9" rev-constraint-default="3.3.9" rev-constraint-dynamic="3.3.9" callerrev="0.1-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="maven-model" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="117849" time="1954" location="/home/wilson/.ivy2/cache/org.apache.maven/maven-model/srcs/maven-model-3.3.9-sources.jar">
+						<origin-location is-local="false" location="http://repo-desktop:8081/artifactory/proxy-maven/org/apache/maven/maven-model/3.3.9/maven-model-3.3.9-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.apache.ant" name="ant-launcher">
+			<revision name="1.9.9" status="release" pubdate="20170203001411" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://ant.apache.org/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="4">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="2789" time="0" location="/home/wilson/.ivy2/cache/org.apache.ant/ant-launcher/ivy-1.9.9.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/ant/ant-launcher/1.9.9/ant-launcher-1.9.9.pom"/>
+				<caller organisation="default" name="project$sources_2.10" conf="compile, runtime-internal, runtime, optional" rev="1.9.9" rev-constraint-default="1.9.9" rev-constraint-dynamic="1.9.9" callerrev="0.1-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="ant-launcher" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="19063" time="1444" location="/home/wilson/.ivy2/cache/org.apache.ant/ant-launcher/srcs/ant-launcher-1.9.9-sources.jar">
+						<origin-location is-local="false" location="http://repo-desktop:8081/artifactory/proxy-maven/org/apache/ant/ant-launcher/1.9.9/ant-launcher-1.9.9-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.apache.maven" name="maven-artifact">
+			<revision name="3.3.9" status="release" pubdate="20151110220925" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="3">
+				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="14629" time="0" location="/home/wilson/.ivy2/cache/org.apache.maven/maven-artifact/ivy-3.3.9.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/maven/maven-artifact/3.3.9/maven-artifact-3.3.9.pom"/>
+				<caller organisation="default" name="project$sources_2.10" conf="compile, runtime-internal, runtime, optional" rev="3.3.9" rev-constraint-default="3.3.9" rev-constraint-dynamic="3.3.9" callerrev="0.1-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="maven-artifact" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="48531" time="1739" location="/home/wilson/.ivy2/cache/org.apache.maven/maven-artifact/srcs/maven-artifact-3.3.9-sources.jar">
+						<origin-location is-local="false" location="http://repo-desktop:8081/artifactory/proxy-maven/org/apache/maven/maven-artifact/3.3.9/maven-artifact-3.3.9-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.apache.commons" name="commons-lang3">
+			<revision name="3.4" status="release" pubdate="20150403180112" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://commons.apache.org/proper/commons-lang/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="9">
+				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="11673" time="0" location="/home/wilson/.ivy2/cache/org.apache.commons/commons-lang3/ivy-3.4.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/commons/commons-lang3/3.4/commons-lang3-3.4.pom"/>
+				<caller organisation="default" name="project$sources_2.10" conf="compile, runtime-internal, runtime, optional" rev="3.4" rev-constraint-default="3.4" rev-constraint-dynamic="3.4" callerrev="0.1-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="commons-lang3" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="487156" time="121" location="/home/wilson/.ivy2/cache/org.apache.commons/commons-lang3/srcs/commons-lang3-3.4-sources.jar">
+						<origin-location is-local="false" location="http://repo-desktop:8081/artifactory/proxy-maven/org/apache/commons/commons-lang3/3.4/commons-lang3-3.4-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.codehaus.plexus" name="plexus-utils">
+			<revision name="3.0.22" status="release" pubdate="20150407214026" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://plexus.codehaus.org/plexus-utils" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="7">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="7382" time="0" location="/home/wilson/.ivy2/cache/org.codehaus.plexus/plexus-utils/ivy-3.0.22.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/codehaus/plexus/plexus-utils/3.0.22/plexus-utils-3.0.22.pom"/>
+				<caller organisation="default" name="project$sources_2.10" conf="compile, runtime-internal, runtime, optional" rev="3.0.22" rev-constraint-default="3.0.22" rev-constraint-dynamic="3.0.22" callerrev="0.1-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="plexus-utils" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="262042" time="3228" location="/home/wilson/.ivy2/cache/org.codehaus.plexus/plexus-utils/srcs/plexus-utils-3.0.22-sources.jar">
+						<origin-location is-local="false" location="http://repo-desktop:8081/artifactory/proxy-maven/org/codehaus/plexus/plexus-utils/3.0.22/plexus-utils-3.0.22-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.eclipse.sisu" name="org.eclipse.sisu.inject">
+			<revision name="0.3.2" status="release" pubdate="20150914051108" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="2">
+				<license name="Eclipse Public License, Version 1.0" url="http://www.eclipse.org/legal/epl-v10.html"/>
+				<metadata-artifact status="no" details="" size="3751" time="0" location="/home/wilson/.ivy2/cache/org.eclipse.sisu/org.eclipse.sisu.inject/ivy-0.3.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/eclipse/sisu/org.eclipse.sisu.inject/0.3.2/org.eclipse.sisu.inject-0.3.2.pom"/>
+				<caller organisation="default" name="project$sources_2.10" conf="compile, runtime-internal, runtime, optional" rev="0.3.2" rev-constraint-default="0.3.2" rev-constraint-dynamic="0.3.2" callerrev="0.1-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="org.eclipse.sisu.inject" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="305022" time="2957" location="/home/wilson/.ivy2/cache/org.eclipse.sisu/org.eclipse.sisu.inject/srcs/org.eclipse.sisu.inject-0.3.2-sources.jar">
+						<origin-location is-local="false" location="http://repo-desktop:8081/artifactory/proxy-maven/org/eclipse/sisu/org.eclipse.sisu.inject/0.3.2/org.eclipse.sisu.inject-0.3.2-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.ow2.asm" name="asm-tree">
+			<revision name="5.2" status="release" pubdate="20161223151314" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="1">
+				<license name="BSD" url="http://asm.objectweb.org/license.html"/>
+				<metadata-artifact status="no" details="" size="4113" time="0" location="/home/wilson/.ivy2/cache/org.ow2.asm/asm-tree/ivy-5.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/ow2/asm/asm-tree/5.2/asm-tree-5.2.pom"/>
+				<caller organisation="default" name="project$sources_2.10" conf="compile, runtime-internal, runtime, optional" rev="5.2" rev-constraint-default="5.2" rev-constraint-dynamic="5.2" callerrev="0.1-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="asm-tree" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="1069155" time="3797" location="/home/wilson/.ivy2/cache/org.ow2.asm/asm-tree/srcs/asm-tree-5.2-sources.jar">
+						<origin-location is-local="false" location="http://repo-desktop:8081/artifactory/proxy-maven/org/ow2/asm/asm-tree/5.2/asm-tree-5.2-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.ow2.asm" name="asm">
+			<revision name="5.2" status="release" pubdate="20161223151310" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="18">
+				<license name="BSD" url="http://asm.objectweb.org/license.html"/>
+				<metadata-artifact status="no" details="" size="3939" time="0" location="/home/wilson/.ivy2/cache/org.ow2.asm/asm/ivy-5.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/ow2/asm/asm/5.2/asm-5.2.pom"/>
+				<caller organisation="default" name="project$sources_2.10" conf="compile, runtime-internal, runtime, optional" rev="5.2" rev-constraint-default="5.2" rev-constraint-dynamic="5.2" callerrev="0.1-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="asm" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="1069155" time="731" location="/home/wilson/.ivy2/cache/org.ow2.asm/asm/srcs/asm-5.2-sources.jar">
+						<origin-location is-local="false" location="http://repo-desktop:8081/artifactory/proxy-maven/org/ow2/asm/asm/5.2/asm-5.2-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="javax.enterprise" name="cdi-api">
+			<revision name="1.0" status="release" pubdate="20091109041421" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="0">
+				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+				<metadata-artifact status="no" details="" size="9767" time="0" location="/home/wilson/.ivy2/cache/javax.enterprise/cdi-api/ivy-1.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/javax/enterprise/cdi-api/1.0/cdi-api-1.0.pom"/>
+				<caller organisation="default" name="project$sources_2.10" conf="compile, runtime-internal, runtime, optional" rev="1.0" rev-constraint-default="1.0" rev-constraint-dynamic="1.0" callerrev="0.1-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="cdi-api" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="104377" time="141" location="/home/wilson/.ivy2/cache/javax.enterprise/cdi-api/srcs/cdi-api-1.0-sources.jar">
+						<origin-location is-local="false" location="http://repo-desktop:8081/artifactory/proxy-maven/javax/enterprise/cdi-api/1.0/cdi-api-1.0-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="javax.inject" name="javax.inject">
+			<revision name="1" status="release" pubdate="20091014050500" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://code.google.com/p/atinject/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="21">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="2506" time="0" location="/home/wilson/.ivy2/cache/javax.inject/javax.inject/ivy-1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/javax/inject/javax.inject/1/javax.inject-1.pom"/>
+				<caller organisation="default" name="project$sources_2.10" conf="compile, runtime-internal, runtime, optional" rev="1" rev-constraint-default="1" rev-constraint-dynamic="1" callerrev="0.1-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="javax.inject" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="10928" time="62" location="/home/wilson/.ivy2/cache/javax.inject/javax.inject/srcs/javax.inject-1-sources.jar">
+						<origin-location is-local="false" location="http://repo-desktop:8081/artifactory/proxy-maven/javax/inject/javax.inject/1/javax.inject-1-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="javax.annotation" name="jsr250-api">
+			<revision name="1.0" status="release" pubdate="20070516015559" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://jcp.org/aboutJava/communityprocess/final/jsr250/index.html" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="17">
+				<license name="COMMON DEVELOPMENT AND DISTRIBUTION LICENSE (CDDL) Version 1.0" url="https://glassfish.dev.java.net/public/CDDLv1.0.html"/>
+				<metadata-artifact status="no" details="" size="2591" time="0" location="/home/wilson/.ivy2/cache/javax.annotation/jsr250-api/ivy-1.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/javax/annotation/jsr250-api/1.0/jsr250-api-1.0.pom"/>
+				<caller organisation="default" name="project$sources_2.10" conf="compile, runtime-internal, runtime, optional" rev="1.0" rev-constraint-default="1.0" rev-constraint-dynamic="1.0" callerrev="0.1-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="jsr250-api" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="13126" time="56" location="/home/wilson/.ivy2/cache/javax.annotation/jsr250-api/srcs/jsr250-api-1.0-sources.jar">
+						<origin-location is-local="false" location="http://repo-desktop:8081/artifactory/proxy-maven/javax/annotation/jsr250-api/1.0/jsr250-api-1.0-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+	</dependencies>
+</ivy-report>

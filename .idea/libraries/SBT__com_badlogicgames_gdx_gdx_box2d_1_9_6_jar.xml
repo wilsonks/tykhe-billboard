@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="SBT: com.badlogicgames.gdx:gdx-box2d:1.9.6:jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/com.badlogicgames.gdx/gdx-box2d/jars/gdx-box2d-1.9.6.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/com.badlogicgames.gdx/gdx-box2d/srcs/gdx-box2d-1.9.6-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
