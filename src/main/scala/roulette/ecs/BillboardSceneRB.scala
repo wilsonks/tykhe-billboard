@@ -1,22 +1,24 @@
 package roulette.ecs
 
-import better.files.File
 import com.badlogic.ashley.core.Entity
 import com.badlogic.gdx.graphics.Color
+import com.badlogic.gdx.math.Interpolation
 import display.ecs._
 import display.io._
+import monix.eval.Task
 import monix.execution.Cancelable
 import monix.execution.cancelables.SerialCancelable
 import monix.reactive.{Observable, Observer}
 import roulette.Event.SpinCompleted
-import roulette.{Event, State}
+import roulette.{Event, RouletteResources, State}
 import rx.{Ctx, Rx, Var}
-import roulette.RouletteResources
 
 
-class BillboardSceneRB(seed: State, file: File) extends Scene[Any, Any]("billboard2") {
+class BillboardSceneRB(seed: State) extends Scene[Any, Any]("billboard2") {
 
   implicit def owner: Ctx.Owner = Ctx.Owner.Unsafe
+
+  val state: Var[State] = Var(seed)
 
   override def connect(writer: Observer[Any], reader: Observable[Any])(implicit context: WindowContext): Unit = {
     val res = new RouletteResources("billboard2")
@@ -24,18 +26,16 @@ class BillboardSceneRB(seed: State, file: File) extends Scene[Any, Any]("billboa
     implicit val scene: SceneContext = new SceneContext(res)(context)
     context.events.foreach {
       case WindowResized(width, height) => scene.loader.viewport.update(width, height)
-      case WindowClosed                 => exit
-      case _                            =>
+      case WindowClosed => exit
+      case _ =>
     }
     bind(writer, reader)
   }
 
-  val state: Var[State] = Var(seed)
-
   override def bind(writer: Observer[Any], reader: Observable[Any])(implicit scene: SceneContext): Unit = try {
     scene.loader.loadScene("MainScene")
 
-    state.foreach(file.writeSerialized)
+    state.foreach(writer.onNext)
 
     //Rx Level 0
     val spinResults = state.map(x => x.history)
@@ -100,17 +100,6 @@ class BillboardSceneRB(seed: State, file: File) extends Scene[Any, Any]("billboa
     val oneTo18 = Rx(100 * oneTo18Count() / spinCount() * minWidth)
     val green = Rx(100 * zeroCount() / spinCount() * minWidth)
 
-    reader.foreach {
-      case event: SpinCompleted => {
-        try {
-          state() = state.now.transition(event)
-        } catch {
-          case t: Throwable => t.printStackTrace()
-        }
-      }
-      case _ =>
-    }
-
     val target = Var(Option.empty[EditText])
     val spinEdit = EditText(scene.root / "maxWin", 3, Var(true))
     val nameEdit = EditText(scene.root / "name", 10, Var(true))
@@ -131,6 +120,17 @@ class BillboardSceneRB(seed: State, file: File) extends Scene[Any, Any]("billboa
     oneTo18Percentage.map(x => Rx(x).updates(scene.root / "oneTo18Percentage"))
     nineteenTo36Percentage.map(x => Rx(x).updates(scene.root / "nineteenTo36Percentage"))
 
+    import display.ecs.fx._
+    import scala.concurrent.duration._
+    val duration = 3.seconds
+    val entity = scene.root / "lastWinNumber"
+    val effect = entity.tint.fade(0f, Interpolation.bounceOut, duration).doOnFinish(_ => Task.evalOnce(entity.tint.fadeTo(1f)))
+    reader.foreach  {
+      case e: SpinCompleted =>
+        effect.runAsync
+        Task.evalOnce(state() = state.now.transition(e)).delayExecution(duration).runAsync
+      case _ =>
+    }
     spinResults.trigger {
       //      println(state.now)
       updateEntity(scene.root / "lastWinNumber", lastWinNumber.now, getColor(lastWinNumber.now))
@@ -329,5 +329,5 @@ case class EditText(entity: Entity, size: Int, enabled: Rx[Boolean])(implicit ow
 
 
 object BillboardSceneRB {
-  def apply(seed: State, file: File): BillboardSceneRB = new BillboardSceneRB(seed, file)
+  def apply(seed: State): BillboardSceneRB = new BillboardSceneRB(seed)
 }
