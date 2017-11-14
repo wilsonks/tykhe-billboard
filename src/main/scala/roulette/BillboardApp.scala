@@ -10,8 +10,9 @@ import display.io.WindowConfig
 import monix.execution.Scheduler
 import monix.execution.schedulers.SchedulerService
 import monix.reactive.Observable
+import pureconfig._
 import roulette.State.Running
-import roulette.ecs.{BillboardSceneRB}
+import roulette.ecs.{BillboardSceneRB,BillboardScene}
 import scodec.bits.ByteVector
 
 import scala.concurrent.duration._
@@ -35,13 +36,11 @@ object BillboardApp extends App {
     file.readDeserialized[Running]
   }
 
-  val config = WindowConfig(position = (
-    conf.getInt("window.startX"),
-    conf.getInt("window.startY")),
-    dimensions = (conf.getInt("window.X"), conf.getInt("window.Y")))
+  val config = loadConfigOrThrow[WindowConfig]("window")
 
-//  val (scene, ui) = display.io.desktop.open(BillboardScene(seed, file) -> config)
-  val (scene, ui) = display.io.desktop.open(BillboardSceneRB(seed, file) -> config)
+  val window = if(conf.getString("app.theme") == "red-black") BillboardSceneRB(seed) else BillboardScene(seed)
+
+  val (scene, ui) = display.io.desktop.open(window -> config)
 
 
   val device = Observable.interval(10.seconds)
@@ -57,7 +56,7 @@ object BillboardApp extends App {
   //    case DeviceAttached(usb) =>
   //      println(s"device attached $usb")
   //      val (_, wheel) = hub.open(usb)
-  //        .pipe(device.io.reader(SlingShotDecoder))
+  //        .pipe(device.io.reader(Input.codec))
   //        .unicast
   //      wheel.foreach(scene.onNext)
   //    case DeviceDetached(usb) =>
@@ -70,6 +69,7 @@ object BillboardApp extends App {
   //    .debug("<")
   //    .debug("<<")
 
+  Thread.sleep(5000L)
   device.decode(Input.codec)
     .debug("protocol")
     .collect {
@@ -77,7 +77,10 @@ object BillboardApp extends App {
     }.foreach(scene.onNext)
 
   // latch gate is open when ui thread on complete.
-  ui.doOnTerminate(_ => latch.countDown()).subscribe()
+  ui.doOnTerminate(_ => latch.countDown()).foreach {
+    case s: State.Running => file.writeSerialized(s)
+    case _ =>
+  }
   latch.await()
   scheduler.shutdown()
   scheduler.awaitTermination(2.seconds, Scheduler.global)

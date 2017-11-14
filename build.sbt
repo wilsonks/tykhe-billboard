@@ -1,7 +1,7 @@
 lazy val billboard = project
   .in(file("."))
   .settings(moduleSettings)
-  .settings(libraryDependencies += library("config"))
+  .settings(libraryDependencies += library("pureconfig"))
   .settings(libraryDependencies += library("better-files"))
   .settings(libraryDependencies += library("device-usb"))
   .settings(libraryDependencies += library("display-desktop"))
@@ -14,7 +14,7 @@ lazy val billboard = project
     assemblyJarName in assembly := "billboardRB900x1600test.jar")
 
 lazy val library = Map(
-  "config" ->  "com.typesafe" % "config" % "1.2.1",
+  "pureconfig" -> "com.github.pureconfig" %% "pureconfig" % versions("pureconfig"),
   "better-files" -> "com.github.pathikrit" % "better-files_2.12" % "3.2.0",
   "device-usb" -> "io.device" %% "device-usb" % versions("device"),
   "display-desktop" -> "io.display" %% "display-desktop" % versions("display"),
@@ -26,7 +26,8 @@ lazy val library = Map(
 lazy val versions = Map(
   "device" -> "0.5.8",
   "display" -> "0.7.3",
-  "gdx" -> "1.9.6")
+  "gdx" -> "1.9.6",
+  "pureconfig" -> "0.7.2")
 
 lazy val aggregateSettings = sharedSettings ++ noPublish ++ noSources
 

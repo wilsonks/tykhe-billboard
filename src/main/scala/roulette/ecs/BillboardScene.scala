@@ -1,6 +1,5 @@
 package roulette.ecs
 
-import better.files.File
 import com.badlogic.gdx.graphics.Color
 import display.ecs._
 import display.io._
@@ -8,14 +7,15 @@ import monix.execution.Cancelable
 import monix.execution.cancelables.SerialCancelable
 import monix.reactive.{Observable, Observer}
 import roulette.Event.SpinCompleted
-import roulette.{Event, State}
+import roulette.{Event, RouletteResources, State}
 import rx.{Ctx, Rx, Var}
-import roulette.RouletteResources
 
 
-class BillboardScene(seed: State, file: File) extends Scene[Any, Any]("billboard1") {
+class BillboardScene(seed: State) extends Scene[Any, Any]("billboard1") {
 
   implicit def owner: Ctx.Owner = Ctx.Owner.Unsafe
+
+  val state: Var[State] = Var(seed)
 
   override def connect(writer: Observer[Any], reader: Observable[Any])(implicit context: WindowContext): Unit = {
     val res = new RouletteResources("billboard1")
@@ -23,19 +23,16 @@ class BillboardScene(seed: State, file: File) extends Scene[Any, Any]("billboard
     implicit val scene: SceneContext = new SceneContext(res)(context)
     context.events.foreach {
       case WindowResized(width, height) => scene.loader.viewport.update(width, height)
-      case WindowClosed                 => exit
-      case _                            =>
+      case WindowClosed => exit
+      case _ =>
     }
     bind(writer, reader)
   }
 
-
-  val state: Var[State] = Var(seed)
-
   override def bind(writer: Observer[Any], reader: Observable[Any])(implicit scene: SceneContext): Unit = try {
     scene.loader.loadScene("MainScene")
 
-    state.foreach(file.writeSerialized)
+    state.foreach(writer.onNext)
     //Rx Level 0
     val spinResults = state.map(x => x.history)
     val maxSpins = state.map(x => x.maxSpinCount)
@@ -338,5 +335,5 @@ class BillboardScene(seed: State, file: File) extends Scene[Any, Any]("billboard
 //}
 
 object BillboardScene {
-  def apply(seed: State, file: File): BillboardScene = new BillboardScene(seed, file)
+  def apply(seed: State): BillboardScene = new BillboardScene(seed)
 }
